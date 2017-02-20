@@ -1,0 +1,85 @@
+<!Doctype html>
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}" type="text/css">
+    <title>Kanchanpur Iconic</title>
+</head>
+    <body>
+        <!-- logo image -->
+        <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
+        
+        <!-- head and navigation -->
+            <div class="head">
+            <nav class="topnav">
+                <ul class="navbar">
+                    <li><a class="active" href="{% url 'homepage' %}">HOME</a></li>
+                    <li><a href="{% url 'news' %}">NEWS</a></li>
+                    <li><a href="{% url 'team' %}">TEAM</a></li>
+                    <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
+                    <li><a href="#">GALLARY</a></li>
+                    <li><a href="#">SPONSERS</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li class="dropdown">
+                            <a class="dropbtn" href="#">
+                            <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
+                            </a>
+                        <div class="dropdown-icon">
+                            <a href="#">NEWS</a>
+                            <a href="#">TEAM</a>
+                            <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
+                            <a href="#">GALLARY</a>
+                            <a href="#">ABOUT US</a>
+                            <a href="#">SPONSERS</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        
+        <!-- slideshow of the images -->
+        
+<div class="slideshow">
+{% for data in first.photos_set.all %}
+  <img class="mySlides" src="{{ data.image.url }}" style="width:100%">
+{% endfor %}
+</div>
+                <!-- javascript here -->
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+    <!-- About the Kanchanpur Iconic club -->
+        <article class="article">
+            <div class="contents">
+        <h2 class="title" style="text-decoration:underline;">Kanchanpur Iconic</h2>
+            <p>Kanchanpur Iconic is a team of Sports Enthusiasts, who has shown a positive move to promote a cricket team from Kanchanpur. Our Contribution alone has made Kanchanpur Iconic an auction based team today.<br>
+            </p>
+            <p>Kanchanpur Iconic has become the highest spending franchise in auction, by spending Rs. 850,000 (Eight lakh fifty thousand)to buy 14 players including Caption.<br></p>
+            <p>In making Team Strong Iconic's are spending not only in players, but also in all necessary tools to promote and support the team.
+                </p>
+            </div>
+         </article>
+<!-- footer of the page -->
+        <footer>
+            <div class="foot">
+                Copyright &copy; 2017 &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
+            </div>
+        </footer>
+    </body>
+</html>

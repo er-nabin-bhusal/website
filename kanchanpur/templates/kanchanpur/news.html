@@ -1,0 +1,74 @@
+<!Doctype html>
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'news.css' %}" type="text/css">
+    <title>Kanchanpur Iconic</title>
+</head>
+    <body>
+        <!-- logo image -->
+        <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
+        
+        <!-- head and navigation -->
+            <div class="head">
+            <nav class="topnav">
+                <ul class="navbar">
+                    <li><a href="{% url 'homepage' %}">HOME</a></li>
+                    <li><a class="active" href="{% url 'news' %}">NEWS</a></li>
+                    <li><a href="{% url 'team' %}">TEAM</a></li>
+                    <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
+                    <li><a href="#">GALLARY</a></li>
+                    <li><a href="#">SPONSERS</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li class="dropdown">
+                            <a class="dropbtn" href="##">
+                            <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
+                            </a>
+                        <div class="dropdown-icon">
+                            <a href="#">NEWS</a>
+                            <a href="{% url 'team' %}">TEAM</a>
+                            <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
+                            <a href="#">GALLARY</a>
+                            <a href="#">ABOUT US</a>
+                            <a href="#">SPONSERS</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+
+            <div class="schedule">
+            <h3 style="text-decoration: underline;">Match News for Kanchanpur Iconic only</h3>
+            {% if data %} 
+               <p><strong>Today is the match : {{ data.upcoming_match }}  at {{ data.match_time }}</strong> </p>
+                <p>click in the link to view the match Live: <a href="{{ data.match_link }}" target="_blank">{{ data.match_link }}</a></p>
+            {% endif %}
+            {% if weblink %}
+               <p> <strong>Match will be on : {{ weblink.upcoming_match }} at {{ weblink.match_time }}</strong><br> On this link: <a href="{{ weblink.match_link }}" target="_blank">{{ weblink.match_link }}</a></p>
+            {% endif %}
+            {% if gone %}
+            <p> <b> Match Dates will be Posted soon Stay Updated </b></p>
+            {% endif %}
+
+            {% if unknown %}
+            <p> <b> Match Dates will be Posted soon Stay Updated </b></p>
+            {% endif %}
+
+            </div>
+        <footer>
+            <div class="foot">
+                Copyright &copy; 2017 &nbsp; &nbsp;  <a href="www.bean.com"> Developers</a>
+            </div>
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
