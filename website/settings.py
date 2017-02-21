@@ -25,7 +25,7 @@ SECRET_KEY = '2tmj@m40xgg^f9epfo%$h45im+sv&#uuu42nrftu)v(2hxc(6p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['104.236.239.144']
+ALLOWED_HOSTS = ['104.236.239.144','.kanchanpuriconic.com']
 
 
 # Application definition
