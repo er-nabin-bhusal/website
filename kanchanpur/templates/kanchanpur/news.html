@@ -10,8 +10,9 @@
 </head>
     <body>
         <!-- logo image -->
+        <a href="{% url 'homepage' %}">
         <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
-        
+        </a>
         <!-- head and navigation -->
             <div class="head">
             <nav class="topnav">
@@ -28,7 +29,7 @@
                             <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
                             </a>
                         <div class="dropdown-icon">
-                            <a href="#">NEWS</a>
+                            <a href="{% url 'news' %">NEWS</a>
                             <a href="{% url 'team' %}">TEAM</a>
                             <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
                             <a href="#">GALLARY</a>
@@ -60,7 +61,7 @@
             </div>
         <footer>
             <div class="foot">
-                Copyright &copy; 2017 &nbsp; &nbsp;  <a href="www.bean.com"> Developers</a>
+                Copyright &copy; 2017 &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
             </div>
         </footer>
     </body>
