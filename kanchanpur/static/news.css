@@ -16,4 +16,12 @@ body
 	{
 		margin-left: 18%;
 	}
+	 footer
+    {
+        font-size: 11px;
+        width: 100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+    }
 }

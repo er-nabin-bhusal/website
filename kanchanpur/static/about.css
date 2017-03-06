@@ -49,4 +49,10 @@ body
     padding: 3px;
     margin-bottom: 2px;
 } 
-/* footer */
+@media screen and (max-width: 460px)
+{
+    .details
+    {
+        font-size: 12px;
+    }
+}

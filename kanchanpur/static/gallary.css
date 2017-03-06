@@ -8,19 +8,18 @@ body
     text-align: center; 
 }
 .slideshowgallary
-{   
-    margin-top: 1px;
-    margin-left: 20%;
-    margin-right:20%;
-    overflow: scroll;
-}
-.photos
-{  
-    min-width:455px;
-    max-width: 556px;
-    height: auto;
-    display:none;
-}
+    {
+        margin-top: 100px;
+        margin-left: 25%;
+        margin-right: 10%;
+    }
+    .photos
+    {
+        min-width: 200px;
+        max-width: 220px;
+        height: auto;
+        display: none;
+    }
 .buttons
 {
     padding-top:2%;
@@ -46,5 +45,13 @@ body
     {
         padding-top:1%;
         height: 20px;
+    }
+     footer
+    {
+        font-size: 11px;
+        width: 100%;
+        position:absolute;
+        bottom:0;
+        left:0;
     }
 }

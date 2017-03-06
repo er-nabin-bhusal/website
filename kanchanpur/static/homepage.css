@@ -235,4 +235,8 @@ nav ul.navbar li:last-child a
     {
        right: 1.9%;
     }
+     footer
+    {
+        font-size: 11px;
+    }
 }
