@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'homepage.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'news.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sponsor.css' %}" type="text/css">
     <title>Kanchanpur Iconic</title>
 </head>
     <body>
         <!-- logo image -->
-        <a href="{% url 'homepage' %}">
+         <a href="{% url 'homepage' %}">
         <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
         </a>
-        
         <!-- head and navigation -->
             <div class="head">
             <nav class="topnav">
@@ -21,15 +20,15 @@
                     <li><a href="{% url 'homepage' %}">HOME</a></li>
                     <li><a href="{% url 'news' %}">NEWS</a></li>
                     <li><a href="{% url 'team' %}">TEAM</a></li>
-                    <li><a class="active" href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
+                    <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
                     <li><a href="{% url 'gallary' %}">GALLARY</a></li>
-                    <li><a href="{% url 'sponsor' %}">SPONSERS</a></li>
+                    <li><a class="active" href="{% url 'sponsor' %}">SPONSERS</a></li>
                     <li><a href="{% url 'about' %}">ABOUT US</a></li>
                     <li class="dropdown">
                             <a class="dropbtn" href="##">
                             <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
                             </a>
-                       <div class="dropdown-icon">
+                        <div class="dropdown-icon">
                             <a href="{% url 'news' %">NEWS</a>
                             <a href="{% url 'team' %}">TEAM</a>
                             <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
@@ -37,33 +36,16 @@
                             <a href="{% url 'about' %}">ABOUT US</a>
                             <a href="{% url 'sponsor' %}">SPONSERS</a>
                         </div>
-
                     </li>
                 </ul>
             </nav>
             </div>
 
-            <div class="schedule">
-            <h3 style="text-decoration: underline;">Match Schedule for Kanchanpur Iconic only</h3>
-                {% if data %} 
-                   <p><strong>Today is the match : {{ data.upcoming_match }}  at {{ data.match_time }}</strong> </p>
-                    <p>click in the link to view the match Live: <a href="{{ data.match_link }}" target="_blank">{{ data.match_link }}</a></p>
-                {% endif %}
-                {% if weblink %}
-                   <p> <strong>Match will be on : {{ weblink.upcoming_match }} at {{ weblink.match_time }}</strong><br> On this link: <a href="{{ weblink.match_link }}" target="_blank">{{ weblink.match_link }}</a></p>
-                {% endif %}
-                {% if gone %}
-                <p> <b> Match Dates will be Posted soon Stay Updated </b></p>
-                {% endif %}
+        <div class="sponsorbody">
+            Currently We have no sponsors. For Sponsorship contact our Technical members.
+        </div>
 
-                {% if unknown %}
-                <p> <b> Match Dates will be Posted soon Stay Updated </b></p>
-                {% endif %}
-
-                <div class="tickets">
-                </div>
-            </div>
-        <!-- footer of the page -->
+<!-- footer of the page -->
         <footer>
             <div class="foot">
                 &copy; 2017 <a href="http://www.kgsmnr.com.np">kgsmnr.com.np</a>. All Rights Reserved &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
@@ -71,3 +53,9 @@
         </footer>
     </body>
 </html>
+
+
+
+
+
+

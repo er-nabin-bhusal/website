@@ -24,5 +24,9 @@ urlpatterns = [
     url(r'^team$',views.team_view,name="team"),
     url(r'^developer$',views.developer_view,name='developer'),
     url(r'^ticket$',views.ticket_view,name='ticket'),
+    url(r'^gallary$',views.gallary_view,name='gallary'),
+    url(r'^about$',views.about_view,name='about'),
+    url(r'^sponsor$',views.sponsor_view,name='sponsor'),
+
 
 ]

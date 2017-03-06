@@ -9,7 +9,7 @@
 </head>
     <body>
         <!-- logo image -->
-         <a href="{% url 'homepage' %}">
+        <a href="{% url 'homepage' %}">
         <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
         </a>
         <!-- head and navigation -->
@@ -20,20 +20,20 @@
                     <li><a href="{% url 'news' %}">NEWS</a></li>
                     <li><a href="{% url 'team' %}">TEAM</a></li>
                     <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
-                    <li><a href="#">GALLARY</a></li>
-                    <li><a href="#">SPONSERS</a></li>
-                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="{% url 'gallary' %}">GALLARY</a></li>
+                    <li><a href="{% url 'sponsor' %}">SPONSERS</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
                     <li class="dropdown">
                             <a class="dropbtn" href="#">
                             <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
                             </a>
                         <div class="dropdown-icon">
-                            <a href="{% url 'news' %}">NEWS</a>
+                            <a href="{% url 'news' %">NEWS</a>
                             <a href="{% url 'team' %}">TEAM</a>
                             <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
-                            <a href="#">GALLARY</a>
-                            <a href="#">ABOUT US</a>
-                            <a href="#">SPONSERS</a>
+                            <a href="{% url 'gallary' %}">GALLARY</a>
+                            <a href="{% url 'about' %}">ABOUT US</a>
+                            <a href="{% url 'sponsor' %}">SPONSERS</a>
                         </div>
                     </li>
                 </ul>
@@ -79,7 +79,7 @@
 <!-- footer of the page -->
         <footer>
             <div class="foot">
-                Copyright &copy; 2017 &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
+                &copy; 2017 <a href="http://www.kgsmnr.com.np">kgsmnr.com.np</a>. All Rights Reserved &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
             </div>
         </footer>
     </body>

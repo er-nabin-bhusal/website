@@ -1,0 +1,103 @@
+<!Doctype html>
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'about.css' %}" type="text/css">
+    <title>Kanchanpur Iconic</title>
+</head>
+    <body>
+        <!-- logo image -->
+        <a href="{% url 'homepage' %}">
+        <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
+        </a>
+        <!-- head and navigation -->
+            <div class="head">
+            <nav class="topnav">
+                <ul class="navbar">
+                        <li><a href="{% url 'homepage' %}">HOME</a></li>
+                        <li><a href="{% url 'news' %}">NEWS</a></li>
+                        <li><a href="{% url 'team' %}">TEAM</a></li>
+                        <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
+                        <li><a href="{% url 'gallary' %}">GALLARY</a></li>
+                        <li><a href="{% url 'sponsor' %}">SPONSERS</a></li>
+                        <li><a class="active" href="{% url 'about' %}">ABOUT US</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="#">
+                            <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
+                            </a>
+                        <div class="dropdown-icon">
+                            <a href="{% url 'news' %">NEWS</a>
+                            <a href="{% url 'team' %}">TEAM</a>
+                            <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
+                            <a href="{% url 'gallary' %}">GALLARY</a>
+                            <a href="{% url 'about' %}">ABOUT US</a>
+                            <a href="{% url 'sponsor' %}">SPONSERS</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        <!----- contents of the about page ------>
+        <div class="title">
+            <h1>Kanchanpur Iconic</h1>
+        </div>
+        <div class="details">
+            <div class="vision">    
+                <h2>OUR VISION</h2>
+                <h5>To promote cricket sincerely:</h5>
+                <ul>
+                    <li>We promote cricket within the region by providing global expore to local talent, attracting new audiences for cricket with world class presentation.
+                    </li>
+                    <li>To be the most successful and entertaining franchise in the ligue.
+                    </li>
+                </ul>
+            </div>
+            <div class="topmember">
+                <h2>EXECUTIVE MEMBERS</h2>
+                <ul>
+                    <li>President:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Mr. Pitambar Joshi</li>
+                    <li>Vice-President: Mr. Ashok Pandey</li>
+                    <li>Secretary:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mr. Rajendra KC</li>
+                    <li>Tresurer:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Mr. Harish Thapa</li>
+                </ul>
+            </div>
+            <div class="members">
+                <h2>MEMBERS</h2>
+                <ul>
+                    <li>Mr. Gokul Dev Bohara</li>
+                    <li>Mr. Dheeraj Bohara</li>
+                    <li>Mr. Neeraj Chand</li>
+                    <li>Mrs. Manju Shahi </li>
+                    <li>Mr. Ashok Nath</li>
+                </ul>
+            </div>
+            <div class="advisors">
+                <h2>ADVISORS</h2>
+                <ul>
+                    <li>Dr. Netra Prakash Chataut</li> 
+                    <li>Mr. Chitrang Thapa</li>
+                    <li>Mrs. Laxmi Pandey</li>
+                </ul>
+            </div>
+            <div class="technical">
+                <h2>TECHNICAL MEMBERS</h2>
+                <ul>
+                    <li>Mr. Nabin Bhusal</li>
+                    <li>Mr. Bhupendra Ojha</li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        
+     <!-- footer of the page -->
+        <footer>
+            <div class="foot">
+                &copy; 2017 <a href="http://www.kgsmnr.com.np">kgsmnr.com.np</a>. All Rights Reserved &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
+            </div>
+        </footer>
+    </body>
+</html>

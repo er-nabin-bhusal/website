@@ -1,0 +1,52 @@
+body
+{
+	position: relative;
+	height:100%;
+}
+.title
+{
+    font-family:Helvetica, Verdana, serif;
+    color:red;
+    text-align: center;
+}
+.details
+{
+    font-family:Helvetica, Verdana, serif;
+    font-size: 15px;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 8%;
+    color: white;
+}
+.vision
+{
+    background-color: #EC2118;
+    padding: 3px;
+}
+
+.topmember
+{
+    margin-top: 2px;
+    background-color: #EC2118;
+    padding: 3px;
+}
+.members
+{
+    margin-top: 2px;
+    background-color: #EC2118;
+    padding: 3px;
+}
+.advisors
+{
+    margin-top: 2px;
+    background-color: #EC2118;
+    padding: 3px;
+}
+.technical
+{
+    margin-top: 2px;
+    background-color: #EC2118;
+    padding: 3px;
+    margin-bottom: 2px;
+} 
+/* footer */

@@ -1,0 +1,50 @@
+body
+{
+	height:100%;
+    position: relative;
+}
+.gallary
+{
+    text-align: center; 
+}
+.slideshowgallary
+{   
+    margin-top: 1px;
+    margin-left: 20%;
+    margin-right:20%;
+    overflow: scroll;
+}
+.photos
+{  
+    min-width:455px;
+    max-width: 556px;
+    height: auto;
+    display:none;
+}
+.buttons
+{
+    padding-top:2%;
+    text-align: center;
+    height: 50px;
+}
+@media screen and (max-width: 460px)
+{
+    
+    .slideshowgallary
+    {
+        margin-left: 25%;
+        margin-right: 10%;
+    }
+    .photos
+    {
+        min-width: 160px;
+        max-width: 190px;
+        height: auto;
+        display: none;
+    }
+    .buttons
+    {
+        padding-top:1%;
+        height: 20px;
+    }
+}

@@ -19,3 +19,14 @@ class Photos(models.Model):
 
 	def __str__(self):
 		return ('{}'.format(self.user))
+
+class Viewers(models.Model):
+	count = models.IntegerField(null=True)
+	date = models.DateTimeField(null=True)
+
+	def increase(self):
+		self.count = self.count+1
+		return self.save()
+
+	def __str__(self):
+		return ('{}'.format(self.date))

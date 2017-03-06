@@ -1,0 +1,113 @@
+<!Doctype html>
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'gallary.css' %}" type="text/css">
+    <title>Kanchanpur Iconic</title>
+</head>
+    <body>
+        <!-- logo image -->
+         <a href="{% url 'homepage' %}">
+        <img class="logoimage" src="{% static 'kanchanpuriconic.jpg' %}">
+        </a>
+        <!-- head and navigation -->
+            <div class="head">
+            <nav class="topnav">
+                <ul class="navbar">
+                    <li><a class="active" href="{% url 'homepage' %}">HOME</a></li>
+                    <li><a href="{% url 'news' %}">NEWS</a></li>
+                    <li><a href="{% url 'team' %}">TEAM</a></li>
+                    <li><a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a></li>
+                    <li><a class="active" href="{% url 'gallary' %}">GALLARY</a></li>
+                    <li><a href="{% url 'sponsor' %}">SPONSERS</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                    <li class="dropdown">
+                            <a class="dropbtn" href="#">
+                            <img src="{% static 'dropdownimage.png' %}" id="dropdownimage" alt="dropdownimage"/>
+                            </a>
+                        <div class="dropdown-icon">
+                            <a href="{% url 'news' %">NEWS</a>
+                            <a href="{% url 'team' %}">TEAM</a>
+                            <a href="{% url 'ticket' %}">TICKET AND SCHEDULE</a>
+                            <a href="{% url 'gallary' %}">GALLARY</a>
+                            <a href="{% url 'about' %}">ABOUT US</a>
+                            <a href="{% url 'sponsor' %}">SPONSERS</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+<!-- showing the gallary slideshow -->
+        <div class="gallary">
+        <div class="slideshowgallary">
+            <img alt="photos" class="photos" src="{% static 'ashok.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'anil_kumar_thapa.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'avinash_karn.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'bhim_sarki.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'chandra_sawad.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'binod_bhandari.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'glass.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'haseem_ansari.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'sunil_dhamala.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'some.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'pitambar.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'neeraj_chand.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'lalit.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'nazir.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'kamal_singh_airee.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'khoi.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'kushal_bhurtel.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'ramesh-bhatta.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'sagar_pun.jpg' %}">
+            <img alt="photos" class="photos" src="{% static 'siddant_lohani.jpg' %}">
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="higer">
+                <button class="btn" onclick="plusDivs(-1)">Previous</button>&nbsp; . . . &nbsp;
+                <button class="btn" onclick="plusDivs(1)">Next</button>
+            </div>
+        </div>
+    <!-- Script for the image slideshow gallary -->
+        <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                  showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("photos");
+                  if (n > x.length) 
+                    {
+                        slideIndex = 1
+                    }    
+                  if (n < 1) 
+                  {
+                      slideIndex = x.length
+                  }
+                  for (i = 0; i < x.length; i++) 
+                  {
+                     x[i].style.display = "none";
+                  }
+                  x[slideIndex-1].style.display = "block";  
+                }
+        </script>
+        
+        <!-- footer of the page -->
+        <footer>
+            <div class="foot">
+                &copy; 2017 <a href="http://www.kgsmnr.com.np">kgsmnr.com.np</a>. All Rights Reserved &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;  <a href="{% url 'developer' %}"> Developers</a>
+            </div>
+        </footer>
+    </body>
+</html>
